@@ -1,0 +1,68 @@
+#!/bin/bash
+
+echo -----------------------------------------
+echo "You hear the old man's laughter as you walk into this room. There is a bright beam of light shining in. To the NORTH there is a large door with steel bars. You see the old man on the other side laughing and staring at you." #room discription
+echo -----------------------------------------
+echo "What do you wish to do?
+1. Look around.
+2. Move North.
+3. Move East.
+4. Move South.
+5. Move West.
+6. Check inventory.
+7. Interact.
+8. Help!
+Ctrl+C to quit.
+ Please enter 1-8."
+  
+  
+ while true; do #will loop until it goes the right way and 'break's or is given the kill signal
+read input
+if [[ $input == "1" ]] #More detailed room discription
+then
+echo "The steel door seems to have a lock on it. Through the bars, and past the old man you see the forest. Outside! You're so close! And there is a door leading to the previous room to the EAST."
+fi
+if [[ $input == "2" ]] #Move North
+then
+key=`cat key.txt`
+if [[ -n $key ]]
+then
+. room18.bs
+break  #uncomment if a path is this way
+else
+echo "You need a key."
+fi
+fi
+if [[ $input == "3" ]] #Move east
+then
+. room16.bs #bash script
+break  #uncomment if a path is this way
+#echo "There is nothing this way"
+fi
+if [[ $input == "4" ]] #move south
+then
+ #bash script
+#break  #uncomment if a path is this way
+echo "There is nothing this way"
+fi
+if [[ $input == "5" ]] #move west
+then
+ #bash script
+#break  #uncomment if a path is this way
+echo "There is nothing this way"
+fi
+if [[ $input == "6" ]] #check inventory
+then
+cat key.txt
+cat torch.txt
+#"You own nothing" #add a file that script looks to for a number that represents an item
+fi
+if [[ $input == "7" ]] #Interact
+then
+echo "You grab the bars and shake but the door is locked tight."
+fi
+if [[ $input == "8" ]] #HELP
+then
+echo "Try using a KEY and heading NORTH (2)"
+fi
+done

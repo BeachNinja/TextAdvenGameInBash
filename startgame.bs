@@ -1,0 +1,10 @@
+#!/bin/bash/
+
+echo "" > torch.txt
+echo "" > key.txt
+
+echo _____________________________________
+echo "Starting New Game!"
+echo _____________________________________
+
+. room1.bs

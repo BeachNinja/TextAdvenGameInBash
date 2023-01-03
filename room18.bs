@@ -1,0 +1,18 @@
+#!/bin/bash/
+
+echo --------------------------------------------------------
+echo "You unlock the door, and step outside. At this sight the old man turns and runs into the woods. You start walking into the forest, but the world goes black."
+echo --------------------------------------------------------
+sleep 5
+echo --------------------------------------------------------
+echo "Your eyes open to see a ceiling... it looks familiar. You sit up to see you are lying in bed, and it's your bed. Sitting up you connect the dots 'You were asleep, and that was a strange dream.' Standing up you walk over and pour a glass of water."
+echo --------------------------------------------------------
+sleep 10
+echo --------------------------------------------------------
+echo "After you finish your glass of water you turn around, only to see two things laying on your table. A ring of keys, and an unlit torch..."
+echo --------------------------------------------------------
+sleep 7s
+
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo The End
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

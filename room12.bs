@@ -1,0 +1,70 @@
+#!/bin/bash
+
+echo -----------------------------------------
+echo "Steping into this room you see an older man with long white hair, mumbling to himself." #room discription
+echo -----------------------------------------
+echo "What do you wish to do?
+1. Look around.
+2. Move North.
+3. Move East.
+4. Move South.
+5. Move West.
+6. Check inventory.
+7. Interact.
+8. Help!
+Ctrl+C to quit.
+ Please enter 1-8."
+  
+  
+ while true; do #will loop until it goes the right way and 'break's or is given the kill signal
+read input
+if [[ $input == "1" ]] #More detailed room discription
+then
+echo "This man is in tatterd cloth, muttering looking into a pitch black doorway to the NORTH. And a door leading to the previous room to the WEST."
+fi
+if [[ $input == "2" ]] #Move North
+then
+Tor=`cat torch.txt` #bash script
+if [[ -n $Tor ]]
+then
+. room13.bs
+break  #uncomment if a path is this way
+else
+echo "You need a TORCH."
+fi
+#echo "There is nothing this way"
+fi
+if [[ $input == "3" ]] #Move east
+then
+ #bash script
+#break  #uncomment if a path is this way
+echo "There is nothing this way"
+fi
+if [[ $input == "4" ]] #move south
+then
+ #bash script
+#break  #uncomment if a path is this way
+echo "There is nothing this way"
+fi
+if [[ $input == "5" ]] #move west
+then
+. room11.bs #bash script
+break  #uncomment if a path is this way
+#echo "There is nothing this way"
+fi
+if [[ $input == "6" ]] #check inventory
+then
+cat key.txt
+cat torch.txt
+#"You own nothing" #add a file that script looks to for a number that represents an item
+fi
+if [[ $input == "7" ]] #Interact
+then
+echo "You say 'Hey!' to the man.
+OLD MAN:'Oh! hello! We need your help! this next room is to dark and dangerous to travel through with no light! Find a TORCH and we can get out of here!'"
+fi
+if [[ $input == "8" ]] #HELP
+then
+echo "Find a Torch, then go NORTH."
+fi
+done

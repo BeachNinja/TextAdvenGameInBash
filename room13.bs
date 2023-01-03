@@ -1,0 +1,14 @@
+#!/bin/bash/
+
+echo -----------------------------------
+echo "You walk into the room holding your torch, and see there are deep holes in the ground falling to unthinkable depths. A breeze flows up from the holes, good think you listened to the old man. Speaking of the old man he is folling you through the room.
+OLD MAN:'Thank you for helping! We would of died in here if it were not for you!'
+As you step out of the room the breeze blows your torch out"
+echo -----------------------------------
+sleep 10
+echo -----------------------------------
+echo "The old man pushes past you and runs through the next room laughing and saying 'Sorry buddy! I'm getting out of here but you are not!"
+echo -----------------------------------
+sleep 5
+. room14.bs
+echo "unlit torch" > torch.txt
